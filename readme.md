@@ -17,12 +17,12 @@ first step is to download the sql database from that link:
    Moudulation: OFDMA
    Opertion: TDD
    Gnb's Transmition Power: 10dBm
-   Services: UE_0 - NGMN_VOIP, UE_1-NumGnbs = Constant Packets Sizes others can be also NGMN_VIDEO,NGMN_FTP,NGMN_GAMING.
+   Services: UE_0 - NGMN_VOIP, UE_1 - Constant Packets Sizes others can be also NGMN_VIDEO,NGMN_FTP,NGMN_GAMING.
    see for more information https://www.nsnam.org/workshops/wns3-2022/17-bojovic-slides.pdf
    each gnb have maximum randomly 2-5 Ues attached.
    ```
    database tables:
-
+   ```
    Gnbs: show Gnb's location, number pf ues attach and beam angle.\
    UEs: show Ue's location, type of service
    Mcs_Dl and Mcs_Ul: show modulation code schmes 0 mean QPSK 22 mean 256 QAM/
@@ -33,5 +33,6 @@ first step is to download the sql database from that link:
    harq_Dl and harq_Ul:
    tbs_Dl and tbs_Ul:
    ArrivalRateDl and ArrivalRateUl:
+   ```
 
 5. in lstm.ipynb i used the database to train lstm model that can predict the RBs Allocation. 
