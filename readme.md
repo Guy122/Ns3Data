@@ -11,7 +11,7 @@ first step is to download the sql database from that link:
 3. the sql database divide by names from the tamplate XuesYGnbsDateTime which X is number of Ues Y is the number of Gnbs and the DateTime is when the sql was been created.
 
 4. all the simulations build in the following paramaters:
-
+   ```
    bandwith of each gnb is 5mhz which mean that there is 26 RB's for each Gnb.
    Bandwith: 5MHZ.
    Moudulation: OFDMA
@@ -20,7 +20,7 @@ first step is to download the sql database from that link:
    Services: UE_0 - NGMN_VOIP, UE_1-NumGnbs = Constant Packets Sizes others can be also NGMN_VIDEO,NGMN_FTP,NGMN_GAMING.
    see for more information https://www.nsnam.org/workshops/wns3-2022/17-bojovic-slides.pdf
    each gnb have maximum randomly 2-5 Ues attached.
-
+   ```
    database tables:
 
    Gnbs: show Gnb's location, number pf ues attach and beam angle.\
