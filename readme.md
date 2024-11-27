@@ -23,16 +23,19 @@ first step is to download the sql database from that link:
    ```
    database tables:
    ```
-   Gnbs: show Gnb's location, number pf ues attach and beam angle.\
-   UEs: show Ue's location, type of service
-   Mcs_Dl and Mcs_Ul: show modulation code schmes 0 mean QPSK 22 mean 256 QAM/
-   RBs_Allocation_Dl and RBs_Allocation_Ul: show 
-   RSRP: 
-   UE_Tx_Power:
-   UlSINR_Per_RBs:
-   harq_Dl and harq_Ul:
-   tbs_Dl and tbs_Ul:
-   ArrivalRateDl and ArrivalRateUl:
+   Gnbs:
+   1. show Gnb's location,
+   2. number pf ues attach and beam angle.
+   UEs:
+   1. show Ue's location, type of service
+   2. Mcs_Dl and Mcs_Ul: show modulation code schmes (0 mean QPSK 22 mean 256 QAM)/
+   3. RBs_Allocation_Dl and RBs_Allocation_Ul: show
+   4. RSRP: 
+   5. UE_Tx_Power:
+   6. UlSINR_Per_RBs:
+   7. harq_Dl and harq_Ul:
+   8. tbs_Dl and tbs_Ul:
+   9. ArrivalRateDl and ArrivalRateUl:
    ```
 
-5. in lstm.ipynb i used the database to train lstm model that can predict the RBs Allocation. 
+5. In lstm.ipynb I used the database to train lstm model that can predict the RBs Allocation. 
