@@ -23,10 +23,13 @@ first step is to download the sql database from that link:
    ```
    database tables:
    ```
-   Gnbs:
+   Gnbs Table:
+   
    1. show Gnb's location,
    2. number pf ues attach and beam angle.
-   UEs:
+   
+   UEs Table:
+   
    1. show Ue's location, type of service
    2. Mcs_Dl and Mcs_Ul: show modulation code schmes (0 mean QPSK 22 mean 256 QAM)/
    3. RBs_Allocation_Dl and RBs_Allocation_Ul: show
