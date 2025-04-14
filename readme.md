@@ -25,7 +25,7 @@ first step is to download the sql database from that link:
    ```
    Gnbs Table:
    
-   1. show Gnb's location,
+   1. show Gnb's locations,
    2. number of ues attach and beam angle.
    
    UEs Table:
