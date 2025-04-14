@@ -26,7 +26,7 @@ first step is to download the sql database from that link:
    Gnbs Table:
    
    1. show Gnb's location,
-   2. number pf ues attach and beam angle.
+   2. number of ues attach and beam angle.
    
    UEs Table:
    
