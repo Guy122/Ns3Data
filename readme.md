@@ -1,45 +1,79 @@
-Here i will show you my sql database that come from my simualtion that i build in NS3 on C++.
+NS3 5G Simulation Database & LSTM Prediction
 
-first step is to download the sql database from that link:
-1.  Download the sql database from that link:
-   ```
-   https://drive.google.com/file/d/1Q_nTojYQzSMmUZViPwUioq39teKB__8R/view?usp=sharing
-   ```
-2.  You can use the LoadAndClean.ipynb to load the sql database and also search if there is worngs databases inside of it,
-   beware that you need to uploud the database to your drive and monunt it to your colab notebook.
+This repository contains a simulation-based SQL database generated using NS3 (C++) and a predictive model built with LSTM to forecast Resource Block (RB) Allocation in a 5G wireless environment.
+📥 Download the Database
 
-3. the sql database divide by names from the tamplate XuesYGnbsDateTime which X is number of Ues Y is the number of Gnbs and the DateTime is when the sql was been created.
+You can download the SQL database from the following link:
 
-4. all the simulations build in the following paramaters:
-   ```
-   bandwith of each gnb is 5mhz which mean that there is 26 RB's for each Gnb.
-   Bandwith: 5MHZ.
-   Moudulation: OFDMA
-   Opertion: TDD
-   Gnb's Transmition Power: 10dBm
-   Services: UE_0 - NGMN_VOIP, UE_1 - Constant Packets Sizes others can be also NGMN_VIDEO,NGMN_FTP,NGMN_GAMING.
-   see for more information https://www.nsnam.org/workshops/wns3-2022/17-bojovic-slides.pdf
-   each gnb have maximum randomly 2-5 Ues attached.
-   ```
-   database tables:
-   ```
-   Gnbs Table:
-   
-   1. show Gnb's locations,
-   2. number of ues attach and beam angle.
-   
-   UEs Table:
-   
-   1. show Ue's location,
-   2. type of service
-   3. Mcs_Dl and Mcs_Ul: show modulation code schmes (0 mean QPSK 22 mean 256 QAM)/
-   4. RBs_Allocation_Dl and RBs_Allocation_Ul: show
-   5. RSRP: 
-   6. UE_Tx_Power:
-   7. UlSINR_Per_RBs:
-   8. harq_Dl and harq_Ul:
-   9. tbs_Dl and tbs_Ul:
-   10. ArrivalRateDl and ArrivalRateUl:
-   ```
+https://drive.google.com/file/d/1Q_nTojYQzSMmUZViPwUioq39teKB__8R/view?usp=sharing
 
-5. In lstm.ipynb I used the database to train lstm model that can predict the RBs Allocation. 
+🛠️ Getting Started
+
+    Upload the SQL file to your Google Drive.
+
+    Open LoadAndClean.ipynb in Google Colab.
+
+    Mount your Drive and load the database.
+
+    Use the notebook to clean and verify the data (e.g., check for corrupted entries).
+
+🗃️ Database Structure
+
+The database files are named using the format:
+XuesYgnbsDateTime
+Where:
+
+    X = Number of UEs
+
+    Y = Number of gNBs
+
+    DateTime = Timestamp of creation
+
+📌 Simulation Parameters
+
+    Bandwidth per gNB: 5 MHz → 26 RBs
+
+    Modulation: OFDMA
+
+    Operation Mode: TDD
+
+    gNB Power: 10 dBm
+
+    Services Used:
+
+        UE_0 → NGMN_VOIP
+
+        UE_1 → Constant Packet Sizes
+
+        Others may include: NGMN_VIDEO, NGMN_FTP, NGMN_GAMING
+
+    Each gNB: Randomly connected to 2–5 UEs
+
+More details available in the NS-3 Workshop Slides
+📋 Tables Overview
+
+Gnbs Table
+
+    gNB location
+
+    Number of connected UEs
+
+    Beam angle
+
+UEs Table
+
+    UE location & service type
+
+    Mcs_Dl, Mcs_Ul (modulation schemes)
+
+    RBs_Allocation_Dl, RBs_Allocation_Ul
+
+    RSRP, UE_Tx_Power, UlSINR_Per_RBs
+
+    harq_Dl, harq_Ul, tbs_Dl, tbs_Ul
+
+    ArrivalRateDl, ArrivalRateUl
+
+🤖 Predictive Model
+
+The lstm.ipynb notebook contains an LSTM-based model trained on the SQL data to predict future RB allocations.
